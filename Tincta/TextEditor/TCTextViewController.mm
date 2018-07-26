@@ -21,6 +21,8 @@
 #import "TCAMenuHelper.h"
 #import "TCAMiscHelper.h"
 
+#import "CSVStructure.h"
+
 @implementation TCTextViewController
 
 @synthesize lineNumberView, syntaxColoring;
@@ -102,9 +104,19 @@
 }
 
 - (void)setTextStorage:(TCTextStorage *)newTextStorage {
+    
     //[[self.textView layoutManager] replaceTextStorage:newTextStorage];
-    [self setTextViewString:newTextStorage.string];
+    IA_CSV m_csv;
+    char *test;
+    m_csv.update_PCSV_From_String(newTextStorage.string);
+    m_csv.get_CSV_Format_String(test);
+    NSString *m_text = [NSString stringWithUTF8String:test];
+    delete test;
+    [self setTextViewString:m_text];
+    //    [self setTextViewString:newTextStorage.string];
     [self.textView setFont:[TCADefaultsHelper getEditorFont]];
+    
+
 }
 
 

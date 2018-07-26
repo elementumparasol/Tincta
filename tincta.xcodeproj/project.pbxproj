@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E7286D41A85726E008D6395 /* ColorSchemes in Resources */ = {isa = PBXBuildFile; fileRef = 0E7286D21A85726E008D6395 /* ColorSchemes */; };
+		925038082109BDA400BEDA31 /* CSVStructure.mm in Sources */ = {isa = PBXBuildFile; fileRef = 925038072109BDA400BEDA31 /* CSVStructure.mm */; };
 		95F1D01B19AFA3C70022EA99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5CF1E1358922D008CA186 /* main.m */; };
 		95F1D01C19AFA3C70022EA99 /* TinctaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5CF241358922E008CA186 /* TinctaAppDelegate.m */; };
 		95F1D02019AFA3C70022EA99 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5CF4213589517008CA186 /* MainWindowController.m */; };
@@ -100,7 +101,7 @@
 		C6B9086E1D7E1C49009F3465 /* TCStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B9084C1D7E1C49009F3465 /* TCStatusView.m */; };
 		C6B9086F1D7E1C49009F3465 /* TCTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B9084E1D7E1C49009F3465 /* TCTextStorage.m */; };
 		C6B908701D7E1C49009F3465 /* TCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B908501D7E1C49009F3465 /* TCTextView.m */; };
-		C6B908711D7E1C49009F3465 /* TCTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B908521D7E1C49009F3465 /* TCTextViewController.m */; };
+		C6B908711D7E1C49009F3465 /* TCTextViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C6B908521D7E1C49009F3465 /* TCTextViewController.mm */; };
 		C6FE66011898617100CC3019 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6FE65FF1898617100CC3019 /* InfoPlist.strings */; };
 		C6FE66031898617100CC3019 /* Tincta_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FE66021898617100CC3019 /* Tincta_Tests.m */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,8 @@
 /* Begin PBXFileReference section */
 		0E7286D21A85726E008D6395 /* ColorSchemes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ColorSchemes; path = Tincta/ColorSchemes; sourceTree = "<group>"; };
 		0E9FC5E41A6199B100B519EB /* Tincta AppStore-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tincta AppStore-Bridging-Header.h"; sourceTree = "<group>"; };
+		925038062109BDA400BEDA31 /* CSVStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVStructure.h; sourceTree = "<group>"; };
+		925038072109BDA400BEDA31 /* CSVStructure.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CSVStructure.mm; sourceTree = "<group>"; };
 		9554216516B3276400AB5874 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		9554218616B4193A00AB5874 /* WhatsNew.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WhatsNew.txt; sourceTree = "<group>"; };
 		95768996166B56D900275BBA /* Web Sharing.prefPane */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "Web Sharing.prefPane"; sourceTree = "<group>"; };
@@ -251,7 +254,7 @@
 		C6B9084F1D7E1C49009F3465 /* TCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTextView.h; sourceTree = "<group>"; };
 		C6B908501D7E1C49009F3465 /* TCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTextView.m; sourceTree = "<group>"; };
 		C6B908511D7E1C49009F3465 /* TCTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTextViewController.h; sourceTree = "<group>"; };
-		C6B908521D7E1C49009F3465 /* TCTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTextViewController.m; sourceTree = "<group>"; };
+		C6B908521D7E1C49009F3465 /* TCTextViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TCTextViewController.mm; sourceTree = "<group>"; };
 		C6D72AD71D98175A0079163E /* Tincta.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Tincta.entitlements; sourceTree = "<group>"; };
 		C6FE65F91898617100CC3019 /* Tincta Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tincta Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6FE65FE1898617100CC3019 /* Tincta Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tincta Tests-Info.plist"; sourceTree = "<group>"; };
@@ -286,6 +289,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		925038052109BDA400BEDA31 /* IACSV */ = {
+			isa = PBXGroup;
+			children = (
+				925038062109BDA400BEDA31 /* CSVStructure.h */,
+				925038072109BDA400BEDA31 /* CSVStructure.mm */,
+			);
+			path = IACSV;
+			sourceTree = "<group>";
+		};
 		95A5CF021358922D008CA186 = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +356,7 @@
 				C6B908391D7E1C49009F3465 /* SyntaxColoring */,
 				C6B908441D7E1C49009F3465 /* TextEditor */,
 				95A5CF3B135894EF008CA186 /* Controllers */,
+				925038052109BDA400BEDA31 /* IACSV */,
 				9554216516B3276400AB5874 /* MainMenu.xib */,
 				95B8F05D138C2C3400DB73DF /* Notification.xib */,
 				C638AAC81376CECC00E9339C /* Preferences.xib */,
@@ -515,7 +528,7 @@
 				C6B9084F1D7E1C49009F3465 /* TCTextView.h */,
 				C6B908501D7E1C49009F3465 /* TCTextView.m */,
 				C6B908511D7E1C49009F3465 /* TCTextViewController.h */,
-				C6B908521D7E1C49009F3465 /* TCTextViewController.m */,
+				C6B908521D7E1C49009F3465 /* TCTextViewController.mm */,
 			);
 			path = TextEditor;
 			sourceTree = "<group>";
@@ -768,7 +781,7 @@
 				C6B908601D7E1C49009F3465 /* TCPreferencesController.m in Sources */,
 				C6B9085C1D7E1C49009F3465 /* TCAMiscHelper.m in Sources */,
 				C6B908621D7E1C49009F3465 /* TCSearchView.m in Sources */,
-				C6B908711D7E1C49009F3465 /* TCTextViewController.m in Sources */,
+				C6B908711D7E1C49009F3465 /* TCTextViewController.mm in Sources */,
 				C6B908581D7E1C49009F3465 /* TCAApplicationSupportHelper.m in Sources */,
 				95F1D01C19AFA3C70022EA99 /* TinctaAppDelegate.m in Sources */,
 				C6B9085A1D7E1C49009F3465 /* TCADefaultsHelper.m in Sources */,
@@ -781,6 +794,7 @@
 				C6B908661D7E1C49009F3465 /* LexicalState.m in Sources */,
 				C6B908571D7E1C49009F3465 /* Reachability.m in Sources */,
 				C6B9085B1D7E1C49009F3465 /* TCAMenuHelper.m in Sources */,
+				925038082109BDA400BEDA31 /* CSVStructure.mm in Sources */,
 				C6B9086E1D7E1C49009F3465 /* TCStatusView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -905,7 +919,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = ssse3;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -952,7 +966,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = ssse3;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
