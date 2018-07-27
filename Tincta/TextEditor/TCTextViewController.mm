@@ -107,13 +107,17 @@
     
     //[[self.textView layoutManager] replaceTextStorage:newTextStorage];
     IA_CSV m_csv;
-    char *test;
+    char *test = NULL;
     m_csv.update_PCSV_From_String(newTextStorage.string);
     m_csv.get_CSV_Format_String(test);
     NSString *m_text = [NSString stringWithUTF8String:test];
-    delete test;
+    if (test != NULL) {
+        delete test;
+        test = NULL;
+    }
+    
     [self setTextViewString:m_text];
-    //    [self setTextViewString:newTextStorage.string];
+//        [self setTextViewString:newTextStorage.string];
     [self.textView setFont:[TCADefaultsHelper getEditorFont]];
     
 
@@ -798,5 +802,7 @@
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
+
 
 @end

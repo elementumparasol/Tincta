@@ -529,18 +529,36 @@
         return;
     }
     [super drawRect:dirtyRect];
-    if (pageGuideColumn > 0 && [TCADefaultsHelper getShowPageGuide]) {
+    if (/* DISABLES CODE */ (true) || (pageGuideColumn > 0 && [TCADefaultsHelper getShowPageGuide])) {
         NSBezierPath* verticalLine = [NSBezierPath bezierPath];
         CGFloat top = dirtyRect.origin.y;
         CGFloat bottom = dirtyRect.origin.y + dirtyRect.size.height;
-        CGFloat x = 5 + pageGuidePosition;
+//        CGFloat x = 5 + pageGuidePosition;
+
         
-        [verticalLine setLineWidth: 1];
+        CGFloat x = 5 + 140;
+        CGFloat x1 = 5 + 40;
+        CGFloat x2 = 5 + 240;
+        [verticalLine setLineWidth: 2];
         [verticalLine moveToPoint:NSMakePoint(x, top)];
         [verticalLine lineToPoint:NSMakePoint(x, bottom)];
+        [verticalLine moveToPoint:NSMakePoint(x1, top)];
+        [verticalLine lineToPoint:NSMakePoint(x1, bottom)];
+        [verticalLine moveToPoint:NSMakePoint(x2, top)];
+        [verticalLine lineToPoint:NSMakePoint(x2, bottom)];
         [verticalLine setFlatness:0];
         [pageGuideColor set];
         [verticalLine stroke];
+        
+        CGFloat left = dirtyRect.origin.x;
+        CGFloat right = dirtyRect.origin.x + dirtyRect.size.width ;
+        NSBezierPath* horizontalLine = [NSBezierPath bezierPath];
+        [horizontalLine setLineWidth: 16];
+        CGFloat y = 5 + 40;
+        [horizontalLine moveToPoint:NSMakePoint(left, y)];
+        [horizontalLine lineToPoint:NSMakePoint(right, y)];
+        [horizontalLine setFlatness:0];
+        [horizontalLine stroke];
     }
 }
 

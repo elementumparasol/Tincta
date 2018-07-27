@@ -45,6 +45,13 @@ void IA_CSV::PrintAllNodes()
     }
     
 }
+
+
+
+
+
+
+
 void get_CSV_row_col_Text(NSString *str_csv_p,int row,int col,char* c_str_out)
 {
     NSString *str_csv = [NSString stringWithFormat:@"%@\r\n",str_csv_p];
@@ -151,6 +158,7 @@ void get_CSV_row_col(char *c_csv,int *row,int *col)
 }
 void IA_CSV::get_CSV_Format_String(char * &m_str)
 {
+    m_str = NULL;
     NSMutableString *m_text = [[NSMutableString alloc] init];
     EachCell *p_next_row;
     EachCell *p_next_col;
@@ -202,7 +210,7 @@ void IA_CSV::get_CSV_Format_String(char * &m_str)
 //            delete p_tmp_col;
             str_tmp = [NSString stringWithUTF8String:p_tmp_col->cell_text];
             [m_text appendString:str_tmp];
-            for (int i = 5 + p_col_width_max[j] - [str_tmp length]; i > 0; i--) {
+            for (int i = p_col_width_max[j] - [str_tmp length]; i > 0; i--) {
                 [m_text appendString:@" "];
             }
             j++;
